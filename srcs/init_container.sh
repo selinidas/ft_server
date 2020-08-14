@@ -5,7 +5,7 @@ service mysql start
 service nginx start
 mysql -e "
 create database wordpress;
-create user root@localhost identified by 'password';
-grant all privileges on wordpress.* to 'root@'localhost';
+create user wordpress@localhost identified by 'password';
+grant all privileges on wordpress.* to 'wordpress@'localhost';
 flush privileges;"
 /bin/sh
